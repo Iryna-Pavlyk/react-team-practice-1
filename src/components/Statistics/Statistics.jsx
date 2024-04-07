@@ -13,16 +13,14 @@ const icons = {
 export const Statistics = ({ title, stats }) => {
   return (
     <>
-      <h2>
-        <h3 className={style.title}>{title}</h3>
-        <ul className={style.list}>
-          {stats.map(stat => (
-            <li className={style.item} key={stat.id}>
-              <StatisticsItem icon={icons[stat.id]} data={stat} />
-            </li>
-          ))}
-        </ul>
-      </h2>
+      <h3 className={style.title}>{title}</h3>
+      <ul className={style.list}>
+        {stats.map(stat => (
+          <li className={style.item} key={stat.id}>
+            <StatisticsItem icon={icons[stat.id]} data={stat} />
+          </li>
+        ))}
+      </ul>
     </>
   );
 };
